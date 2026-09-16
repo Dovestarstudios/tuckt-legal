@@ -5,94 +5,221 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — tuckt</title>
 <style>
+  :root {
+    --bg-primary: #0D1117;
+    --bg-card: #161B22;
+    --border-color: #30363D;
+    --text-primary: #F0F6FC;
+    --text-secondary: #8B949E;
+    --brand-accent: #B8F566;
+    --brand-accent-hover: #A3E052;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg-primary: #FAFAF8;
+      --bg-card: #FFFFFF;
+      --border-color: #E4E6E0;
+      --text-primary: #0C0F0A;
+      --text-secondary: #57606A;
+      --brand-accent: #4C8C14;
+      --brand-accent-hover: #3A6D0F;
+    }
+  }
+
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    max-width: 720px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 760px;
     margin: 0 auto;
     padding: 60px 24px 100px;
-    color: #1a1a1a;
-    line-height: 1.65;
-    background: #fafaf8;
+    color: var(--text-primary);
+    line-height: 1.7;
+    background-color: var(--bg-primary);
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
-  .brand { font-size: 15px; font-weight: 800; color: #4C8C14; margin-bottom: 32px; text-decoration: none; display: inline-block; }
-  h1 { font-size: 30px; font-weight: 800; margin: 0 0 8px; color: #0C0F0A; }
-  .updated { color: #8A9680; font-size: 14px; margin-bottom: 40px; }
-  h2 { font-size: 19px; font-weight: 700; margin-top: 36px; margin-bottom: 10px; color: #0C0F0A; }
-  p, li { font-size: 15.5px; color: #333; }
-  ul { padding-left: 22px; }
-  a { color: #4C8C14; }
-  hr { border: none; border-top: 1px solid #e4e6e0; margin: 40px 0; }
-  u { text-decoration: underline; }
+
+  .brand {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--brand-accent);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+    display: inline-block;
+    margin-bottom: 32px;
+  }
+
+  .brand:hover {
+    color: var(--brand-accent-hover);
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0 0 8px;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+  }
+
+  .updated {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 40px;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+    letter-spacing: -0.3px;
+  }
+
+  p, li {
+    font-size: 16px;
+    color: var(--text-primary);
+    opacity: 0.92;
+  }
+
+  ul {
+    padding-left: 22px;
+    margin-bottom: 20px;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  a {
+    color: var(--brand-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.15s ease;
+  }
+
+  a:hover {
+    color: var(--brand-accent-hover);
+  }
+
+  .highlight-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 40px 0;
+  }
+
+  .company-details {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.6;
+  }
 </style>
 </head>
 <body>
+
 <a class="brand" href="index.html">tuckt</a>
+
 <h1>Privacy Policy</h1>
 <div class="updated">Last updated September 2026</div>
+
 <h2>1. Who we are</h2>
-<p>tuckt ("we", "us", "our") provides a personal wealth management and retirement planning app for iOS. This policy explains what personal data we collect, why, and your rights over it, in line with UK GDPR and the Data Protection Act 2018.</p>
-<p>Data controller: Dovestar Limited, Doves Barn, Swattenden Lane, Cranbrook, Kent, TN17 3PN. Contact: hello@tuckt.co.uk</p>
+<p>tuckt ("we", "us", "our") provides a personal wealth tracking and financial planning app for iOS. This policy explains what personal data we collect, why, and your rights over it, in line with UK GDPR and the Data Protection Act 2018.</p>
+<p>Data controller: Dovestar Limited, a company registered in England and Wales (company number 17445391), registered office Doves Barn, Swattenden Lane, Cranbrook, Kent, TN17 3PN. ICO registration number: ZC246626. Contact: <a href="mailto:hello@tuckt.co.uk">hello@tuckt.co.uk</a></p>
+
 <h2>2. What data we collect</h2>
 <ul>
-<li><strong>Account data</strong>: name, email address, password (encrypted), date of birth, occupation</li>
-<li><strong>Financial data you enter</strong>: investments (individual holdings or simple total-value entries), crypto, cash, property, pensions (including Defined Contribution and Defined Benefit/Final Salary schemes), debts (credit cards, loans, mortgages, BNPL), income, budget categories, dependants' details (name, type, date of birth), sell/buy transaction records for investments and crypto</li>
-<li><strong>Optional bank connection data</strong>: if you choose to connect a bank account (a feature we make available but never require — you can use tuckt fully by entering figures manually), transaction and balance data is retrieved via our regulated open banking partner (see Section 5)</li>
-<li><strong>Subscription status</strong>: whether you're on our free or paid ("tuckt Pro") tier, and trial status</li>
-<li><strong>Usage data</strong>: app interactions, feature usage, crash reports</li>
-<li><strong>Device data</strong>: device type, OS version, IP address (for security/fraud prevention)</li>
+  <li><strong>Account data</strong>: name, email address, password (securely hashed and never stored in readable form), date of birth, occupation</li>
+  <li><strong>Financial data you enter</strong>: investments (individual holdings or simple total-value entries), crypto, cash, property, pensions (including Defined Contribution and Defined Benefit/Final Salary schemes), debts (credit cards, loans, mortgages, BNPL), income, budget categories, dependants' details (name, type, date of birth), sell/buy transaction records for investments and crypto</li>
+  <li><strong>Optional bank connection data</strong>: if you choose to connect a bank account (a feature we make available but never require — you can use tuckt fully by entering figures manually), transaction and balance data is retrieved via our regulated open banking partner (see Section 5)</li>
+  <li><strong>Subscription status</strong>: whether you're on our free or paid ("tuckt Pro") tier, and trial status</li>
+  <li><strong>Usage data</strong>: app interactions, feature usage, crash reports</li>
+  <li><strong>Device data</strong>: device type, OS version, IP address (for security/fraud prevention)</li>
 </ul>
-<p>We never require you to connect a bank account, brokerage, or pension provider — every feature in tuckt works with manually entered figures. Connecting accounts is an optional convenience.</p>
+<div class="highlight-box">
+  <p>We never require you to connect a bank account, brokerage, or pension provider — every feature in tuckt works with manually entered figures. Connecting accounts is an optional convenience.</p>
+</div>
+
 <h2>3. How we use your data</h2>
 <ul>
-<li>To provide the app's core functionality (tracking your wealth, generating insights, budget and retirement planning, wealth reports)</li>
-<li>To power AI-generated analysis and chat responses — when you use these features, the financial data relevant to your question is sent to our AI provider, Anthropic, to generate a response (see Section 5). The more information you choose to add to tuckt, the more complete and useful this analysis can be</li>
-<li>To send you notifications you've opted into (payment reminders, net worth milestones)</li>
-<li>To process subscription payments (via Apple's App Store and our subscription management provider, RevenueCat)</li>
-<li>To improve the app (aggregated, anonymised usage analytics)</li>
-<li>To communicate with you about your account or the service</li>
+  <li>To provide the app's core functionality (tracking your wealth, generating insights, budget and retirement planning, wealth reports)</li>
+  <li>To power AI-generated analysis and chat responses — when you use these features, the financial data relevant to your question is sent to our AI provider, Anthropic, to generate a response (see Section 5). The more information you choose to add to tuckt, the more complete and useful this analysis can be</li>
+  <li>To send you notifications you've opted into (payment reminders, net worth milestones)</li>
+  <li>To process subscription payments (via Apple's App Store and our subscription management provider, RevenueCat)</li>
+  <li>To improve the app (aggregated, anonymised usage analytics)</li>
+  <li>To communicate with you about your account or the service</li>
 </ul>
+
 <h2>4. Legal basis for processing (UK GDPR)</h2>
 <ul>
-<li><strong>Contract</strong>: processing necessary to provide the service you've signed up for</li>
-<li><strong>Consent</strong>: for optional features like notifications, bank connection, and marketing communications</li>
-<li><strong>Legitimate interests</strong>: fraud prevention, service improvement</li>
-<li><strong>Legal obligation</strong>: for financial/payment records we're required to retain (see Section 6)</li>
+  <li><strong>Contract</strong>: processing necessary to provide the service you've signed up for</li>
+  <li><strong>Consent</strong>: for optional features like notifications, bank connection, and marketing communications</li>
+  <li><strong>Legitimate interests</strong>: fraud prevention, service improvement</li>
+  <li><strong>Legal obligation</strong>: for financial/payment records we're required to retain (see Section 6)</li>
 </ul>
+
 <h2>5. Third parties we share data with</h2>
 <ul>
-<li><strong>Supabase</strong> (database/authentication hosting) — hosted in the EU West (London) region</li>
-<li><strong>Anthropic (Claude AI)</strong> — receives the financial data relevant to a given chat message or analysis request, to generate that response. We access Claude via Anthropic's commercial API (not the consumer Claude.ai product), under which API inputs and outputs are automatically deleted after a short retention period and are not used to train Anthropic's models</li>
-<li><strong>RevenueCat</strong> (subscription management) — processes purchase and subscription-status data, linked to the Apple App Store</li>
-<li><strong>TrueLayer</strong> (open banking) — only if you choose to connect a bank account; TrueLayer is directly regulated by the FCA as an Account Information Service Provider. We do not see or store your bank login details — these are handled entirely by TrueLayer under open banking standards</li>
-<li><strong>Market data providers</strong> (for live price information, when this feature is active) — we send ticker symbols only, never personal data</li>
+  <li><strong>Supabase</strong> (database/authentication hosting) — hosted in the EU West (London) region</li>
+  <li><strong>Anthropic (Claude AI)</strong> — only the information relevant to your specific chat message or analysis request is sent to Anthropic to generate that response (not your entire account or full financial history). We access Claude via Anthropic's commercial API (not the consumer Claude.ai product). Anthropic acts as a data processor on our behalf for this purpose. tuckt does not use your personal financial information to train its own artificial intelligence models, and — under Anthropic's applicable API terms in place at the time of writing — Anthropic does not use API data to train its models either. Prompts and responses are retained by Anthropic only as needed to provide the service, in line with their API terms. If your message includes information about a dependant, that information is processed under the same terms as your other data for this purpose.</li>
+  <li><strong>RevenueCat</strong> (subscription management) — processes purchase and subscription-status data, linked to the Apple App Store</li>
+  <li><strong>TrueLayer</strong> (open banking) — only if you choose to connect a bank account; TrueLayer is directly regulated by the FCA as an Account Information Service Provider. We do not see or store your bank login details — these are handled entirely by TrueLayer under open banking standards. Once imported, transaction and balance data is stored in tuckt in the same way as data you enter manually, and is retained under the same terms (see Section 6). If you disconnect your bank account, we stop importing new data immediately; previously imported data already in your account remains until you delete it yourself or delete your account.</li>
+  <li><strong>Market data providers</strong> (for live price information, when this feature is active) — we send ticker symbols only, never personal data</li>
 </ul>
 <p>We do not sell your personal data to third parties.</p>
+
 <h2>6. Data retention</h2>
 <p>We retain different categories of data for different periods, depending on the purpose:</p>
 <ul>
-<li><strong>General account and financial tracking data</strong> (the information you enter into the app — assets, budget, pensions, etc.): retained while your account is active, and for 30 days after you delete your account, to allow you to recover your account if you change your mind. After this period, this data is permanently deleted.</li>
-<li><strong>Payment and transaction records</strong> (subscription payments, invoices, and related financial records): retained for 6 years from the date of the transaction, in line with UK legal and tax record-keeping requirements (Companies Act 2006 and HMRC requirements), even after account deletion. This is a legal obligation on Dovestar Limited as a UK company, separate from your general app data.</li>
+  <li><strong>General account and financial tracking data</strong> (the information you enter into the app — assets, budget, pensions, etc.): when you delete your account, it becomes inaccessible immediately and enters a 90-day recovery window, during which you can contact us to restore it if you change your mind. After 90 days, this data is permanently deleted from our production systems. Residual copies in routine backups are deleted or overwritten in the ordinary course of our backup cycle, and are not used for any other purpose in the meantime.</li>
+  <li><strong>Payment and transaction records</strong> (subscription payments, invoices, and related financial records): retained for 6 years from the date of the transaction, in line with UK legal and tax record-keeping requirements (Companies Act 2006 and HMRC requirements), even after account deletion.</li>
 </ul>
+
 <h2>7. Your rights</h2>
-<p>Under UK GDPR, you have the right to:
-- Access the personal data we hold about you
-- Correct inaccurate data
-- Request deletion of your data ("right to be forgotten") — noting that payment/transaction records may be retained per Section 6 where we have a legal obligation to do so
-- Export your data in a portable format (tuckt includes a built-in CSV export feature for this)
-- Object to or restrict certain processing
-- Withdraw consent at any time (for consent-based processing, including disconnecting a bank account at any time)</p>
-<p>To exercise these rights, contact hello@tuckt.co.uk. You also have the right to complain to the Information Commissioner's Office (ICO) at ico.org.uk.</p>
+<p>Under UK GDPR, you have the right to:</p>
+<ul>
+  <li>Access the personal data we hold about you</li>
+  <li>Correct inaccurate data</li>
+  <li>Request deletion of your data ("right to be forgotten") — noting that payment/transaction records may be retained per Section 6 where we have a legal obligation to do so</li>
+  <li>Export your data in a portable format (tuckt includes a built-in CSV export feature for this)</li>
+  <li>Object to or restrict certain processing</li>
+  <li>Withdraw consent at any time (for consent-based processing, including disconnecting a bank account at any time)</li>
+</ul>
+<p>To exercise these rights, contact <a href="mailto:hello@tuckt.co.uk">hello@tuckt.co.uk</a>. You also have the right to complain to the Information Commissioner's Office (ICO) at <a href="https://ico.org.uk">ico.org.uk</a>.</p>
+
 <h2>8. Data security</h2>
-<p>We use industry-standard encryption in transit and at rest. Access to your data is restricted to what's necessary to provide the service. Our database provider, Supabase, is SOC 2 Type II compliant, ISO/IEC 27001:2022 certified, and supports GDPR-compliant deployments.</p>
+<p>We use industry-standard encryption in transit and at rest, alongside access controls that restrict data access to what's necessary to provide the service. Our database provider, Supabase, is SOC 2 Type II compliant, ISO/IEC 27001:2022 certified, and supports GDPR-compliant deployments. No method of transmission or storage is completely secure, but we maintain procedures to detect and respond to security incidents, and will notify the ICO and any affected individuals where we're legally required to do so.</p>
+
 <h2>9. International data transfers</h2>
-<p>Your data is hosted within the UK/EEA (Supabase, EU West London region). Where we use third-party processors based outside the UK/EEA (e.g. Anthropic, RevenueCat — please confirm their specific data processing locations against their current published policies at the time of publishing), we rely on appropriate safeguards such as Standard Contractual Clauses where required.</p>
-<h2>10. Children's privacy</h2>
-<p>tuckt is not intended for use by anyone under 18. We do not knowingly collect data from children. Dependant information (including minors) may be entered by an adult user about their own dependants for financial and retirement planning purposes only.</p>
-<h2>11. Changes to this policy</h2>
+<p>Your data is hosted within the UK/EEA (Supabase, EU West London region). Anthropic, our AI provider, processes data in the United States. Where we transfer personal data to Anthropic outside the UK, this is safeguarded by the EU Standard Contractual Clauses together with the UK International Data Transfer Addendum, incorporated into Anthropic's data processing terms, as an approved mechanism for lawful UK data transfers under UK GDPR.</p>
+
+<h2>10. Automated analysis and personalised insights</h2>
+<p>tuckt uses automated analysis of the financial information you provide (such as your net worth, income, investments, spending, pensions, debt, and property) to generate personalised insights, projections, categorisations, and AI commentary within the app.</p>
+<div class="highlight-box">
+  <p>This automated analysis does not determine your eligibility for credit, insurance, employment, or any other service, and does not produce any decision with legal or similarly significant effect on you. It is provided solely to help you understand and organise your own finances.</p>
+</div>
+
+<h2>11. Children's privacy</h2>
+<p>tuckt is not intended for use by anyone under 18. We do not knowingly collect data from children. Dependant information (including minors) may be entered by an adult user about their own dependants for financial and retirement planning purposes only. If you enter information about another person (including a dependant), you confirm you have the appropriate authority to do so. Entering a dependant's information does not make that person a tuckt user or create an account for them.</p>
+
+<h2>12. Changes to this policy</h2>
 <p>We may update this policy from time to time. Material changes will be notified via the app or email.</p>
-<h2>12. Contact us</h2>
-<p>hello@tuckt.co.uk
-<br>
-Dovestar Limited, Doves Barn, Swattenden Lane, Cranbrook, Kent, TN17 3PN</p>
+
+<h2>13. Contact us</h2>
+<p><a href="mailto:hello@tuckt.co.uk">hello@tuckt.co.uk</a></p>
+<p class="company-details">
+  Dovestar Limited<br>
+  Company number: 17445391<br>
+  ICO registration number: ZC246626<br>
+  Registered office: Doves Barn, Swattenden Lane, Cranbrook, Kent, TN17 3PN
+</p>
+
 </body>
 </html>

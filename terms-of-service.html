@@ -5,84 +5,317 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Terms of Service — tuckt</title>
 <style>
+  :root {
+    --bg-primary: #0D1117;
+    --bg-card: #161B22;
+    --border-color: #30363D;
+    --text-primary: #F0F6FC;
+    --text-secondary: #8B949E;
+    --brand-accent: #B8F566;
+    --brand-accent-hover: #A3E052;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg-primary: #FAFAF8;
+      --bg-card: #FFFFFF;
+      --border-color: #E4E6E0;
+      --text-primary: #0C0F0A;
+      --text-secondary: #57606A;
+      --brand-accent: #4C8C14;
+      --brand-accent-hover: #3A6D0F;
+    }
+  }
+
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    max-width: 720px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 760px;
     margin: 0 auto;
     padding: 60px 24px 100px;
-    color: #1a1a1a;
-    line-height: 1.65;
-    background: #fafaf8;
+    color: var(--text-primary);
+    line-height: 1.7;
+    background-color: var(--bg-primary);
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
-  .brand { font-size: 15px; font-weight: 800; color: #4C8C14; margin-bottom: 32px; text-decoration: none; display: inline-block; }
-  h1 { font-size: 30px; font-weight: 800; margin: 0 0 8px; color: #0C0F0A; }
-  .updated { color: #8A9680; font-size: 14px; margin-bottom: 40px; }
-  h2 { font-size: 19px; font-weight: 700; margin-top: 36px; margin-bottom: 10px; color: #0C0F0A; }
-  p, li { font-size: 15.5px; color: #333; }
-  ul { padding-left: 22px; }
-  a { color: #4C8C14; }
-  hr { border: none; border-top: 1px solid #e4e6e0; margin: 40px 0; }
-  u { text-decoration: underline; }
+
+  .brand {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--brand-accent);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+    display: inline-block;
+    margin-bottom: 32px;
+  }
+
+  .brand:hover { color: var(--brand-accent-hover); }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0 0 8px;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+  }
+
+  .updated {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 40px;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+    letter-spacing: -0.3px;
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+  }
+
+  p, li {
+    font-size: 16px;
+    color: var(--text-primary);
+    opacity: 0.92;
+  }
+
+  ul { padding-left: 22px; margin-bottom: 20px; }
+  li { margin-bottom: 8px; }
+
+  a {
+    color: var(--brand-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.15s ease;
+  }
+
+  a:hover { color: var(--brand-accent-hover); }
+
+  .highlight-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+
+  hr { border: none; border-top: 1px solid var(--border-color); margin: 40px 0; }
+
+  .company-details {
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .toc {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 24px 0;
+    font-size: 14px;
+  }
+  .toc a { text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin-bottom: 4px; }
 </style>
 </head>
 <body>
+
 <a class="brand" href="index.html">tuckt</a>
+
 <h1>Terms of Service</h1>
 <div class="updated">Last updated September 2026</div>
-<h2>1. Acceptance of terms</h2>
-<p>By downloading, accessing, or using tuckt ("the App"), provided by Dovestar Limited ("we", "us", "our"), you agree to be bound by these Terms of Service. If you don't agree, don't use the App.</p>
-<h2>2. Not regulated financial, tax, or investment advice</h2>
-<p><strong>tuckt is <u>not</u> a regulated financial adviser.</strong> Nothing in the App — including AI-generated insights, analysis, recommendations, the Wealth Report, retirement projections, or capital gains figures — constitutes regulated financial, tax, legal, or investment advice under the Financial Services and Markets Act 2000 or any other applicable regulation.</p>
-<p>The App is a tool for tracking, organising, and modelling your own financial information. All figures, projections, tax calculations, and AI commentary are estimates for informational purposes only and should not be relied upon as the sole basis for any financial decision. This includes retirement income projections, tax-free lump sum estimates, Defined Benefit pension notional valuations (calculated using a standard approximation, not your scheme's actual commutation terms), and capital gains estimates. Always consult a qualified, FCA-regulated financial adviser and/or a qualified accountant before making investment, pension, tax, or other significant financial decisions.</p>
-<p>We are not liable for any financial loss arising from decisions made based on information or insights provided by the App.</p>
-<h2>3. Eligibility</h2>
+
+<p>tuckt is a personal financial tracking and modelling application ("the App") operated by Dovestar Limited, a company registered in England and Wales (company number 17445391), registered office Doves Barn, Swattenden Lane, Cranbrook, Kent, TN17 3PN ("Dovestar", "we", "us", "our").</p>
+
+<div class="toc">
+<strong>Contents</strong>
+<ol>
+<li><a href="#s1">About these Terms</a></li>
+<li><a href="#s2">Eligibility</a></li>
+<li><a href="#s3">Your account</a></li>
+<li><a href="#s4">Financial, tax and investment information</a></li>
+<li><a href="#s5">AI features</a></li>
+<li><a href="#s6">Accuracy and third-party data</a></li>
+<li><a href="#s7">Subscriptions and free trials</a></li>
+<li><a href="#s8">Cancellation and consumer rights</a></li>
+<li><a href="#s9">Your content and financial data</a></li>
+<li><a href="#s10">Privacy</a></li>
+<li><a href="#s11">Third-party services</a></li>
+<li><a href="#s12">Acceptable use</a></li>
+<li><a href="#s13">Intellectual property</a></li>
+<li><a href="#s14">Availability and changes to the App</a></li>
+<li><a href="#s15">Suspension and termination</a></li>
+<li><a href="#s16">Liability</a></li>
+<li><a href="#s17">Force majeure</a></li>
+<li><a href="#s18">Changes to these Terms</a></li>
+<li><a href="#s19">General legal provisions</a></li>
+<li><a href="#s20">Governing law</a></li>
+<li><a href="#s21">Contact us</a></li>
+</ol>
+</div>
+
+<h2 id="s1">1. About these Terms</h2>
+<p>By downloading, accessing, or using the App, you agree to be bound by these Terms of Service. If you don't agree, don't use the App.</p>
+
+<h2 id="s2">2. Eligibility</h2>
 <p>You must be at least 18 years old and a resident of the United Kingdom to use tuckt.</p>
-<h2>4. Your account</h2>
+
+<h2 id="s3">3. Your account</h2>
 <ul>
-<li>You're responsible for keeping your login credentials secure</li>
-<li>You must provide accurate information when creating your account</li>
-<li>You're responsible for all activity under your account</li>
-<li>We may suspend or terminate accounts that violate these terms</li>
+  <li>You're responsible for keeping your login credentials secure, and must not permit another person to use your account</li>
+  <li>You must provide accurate information when creating your account</li>
+  <li>You're responsible for all activity under your account</li>
+  <li>You must notify us promptly at <a href="mailto:hello@tuckt.co.uk">hello@tuckt.co.uk</a> if you believe your account has been accessed without your permission</li>
+  <li>We may suspend or terminate accounts that violate these terms</li>
 </ul>
-<h2>5. Subscriptions and payments</h2>
+
+<h2 id="s4">4. Financial, tax and investment information</h2>
+<div class="highlight-box">
+  <p><strong>tuckt is not a regulated financial adviser.</strong> Nothing in the App constitutes regulated financial, tax, legal, or investment advice under the Financial Services and Markets Act 2000 or any other applicable regulation.</p>
+</div>
+
+<h3>What tuckt does</h3>
 <ul>
-<li>tuckt offers a free trial period of 7 days with full access to all features, after which continued access to premium features (including AI analysis and chat, budget planner, retirement planner, and wealth reports) requires a paid subscription ("tuckt Pro")</li>
-<li>Subscriptions are billed monthly (£7.99) or annually (£69.99) via the Apple App Store and managed through RevenueCat, in accordance with Apple's standard subscription terms</li>
-<li>Subscriptions auto-renew unless cancelled at least 24 hours before the renewal date, via your Apple ID account settings</li>
-<li>Refunds are handled according to Apple's App Store refund policy, not directly by us</li>
-<li>We may change subscription pricing with reasonable notice; continued use after a price change constitutes acceptance</li>
-<li>Certain features (such as CSV import/export) may be limited to paid subscribers even after the free trial ends</li>
+  <li>Records financial information you supply</li>
+  <li>Performs calculations based on that information</li>
+  <li>Provides projections and models (e.g. retirement income, capital gains estimates)</li>
+  <li>Provides general educational information</li>
+  <li>Generates AI commentary based on your data (see Section 5)</li>
 </ul>
-<h2>6. Your data and content</h2>
+
+<h3>What tuckt does not do</h3>
 <ul>
-<li>You retain ownership of the financial data you enter into the App</li>
-<li>You grant us a licence to process that data solely to provide the App's functionality (including sending relevant data to third-party AI/analytics providers as described in our Privacy Policy)</li>
-<li>You're responsible for the accuracy of data you enter — the App's calculations, tax modelling, and AI insights are only as accurate as the information you provide</li>
-<li>Connecting a bank account via our open banking partner is entirely optional; you can use every feature of the App by entering figures manually instead</li>
+  <li>Recommend specific investments</li>
+  <li>Determine whether an investment is suitable for you</li>
+  <li>Provide personalised regulated financial advice</li>
+  <li>Provide tax advice</li>
+  <li>Provide legal advice</li>
+  <li>Guarantee investment, retirement, or tax outcomes</li>
 </ul>
-<h2>7. Acceptable use</h2>
-<p>You agree not to:
-- Use the App for any unlawful purpose
-- Attempt to reverse-engineer, hack, or disrupt the App
-- Share your account with others
-- Use the App to provide financial advice to third parties as a business
-- Attempt to use the AI chat or analysis features for purposes unrelated to your own personal finances</p>
-<h2>8. AI features</h2>
-<p>The App includes AI-generated analysis and chat features powered by a third-party AI provider (currently Anthropic's Claude). AI responses may occasionally be inaccurate, incomplete, or unsuitable for your specific circumstances, and are scoped to discuss your personal finances and the App's features only. You should independently verify any important figures before relying on them. The quality and relevance of AI responses depends on the information you have chosen to enter into the App.</p>
-<h2>9. Third-party services</h2>
-<p>The App may integrate with third-party services (e.g. TrueLayer for optional bank connections, market data providers for live pricing). Your use of those integrations may be subject to those providers' own terms. Live pricing and bank connection features may not be available at all times.</p>
-<h2>10. Intellectual property</h2>
-<p>The App, its design, branding, and underlying code are the property of Dovestar Limited and protected by applicable intellectual property laws. You may not copy, modify, or redistribute the App.</p>
-<h2>11. Limitation of liability</h2>
-<p>To the maximum extent permitted by law, Dovestar Limited is not liable for any indirect, incidental, or consequential damages arising from your use of the App, including but not limited to financial losses resulting from decisions made using App-provided information, projections, or AI-generated content.</p>
-<p>Nothing in these terms excludes or limits liability for death or personal injury caused by negligence, fraud, or any other liability that cannot be excluded under UK law.</p>
-<h2>12. Termination</h2>
+
+<p>All figures, projections, tax calculations, and AI commentary are estimates for informational purposes only. Past performance, projections and estimates are not guarantees of future results. This includes retirement income projections, tax-free lump sum estimates, Defined Benefit pension notional valuations (calculated using a standard approximation, not your scheme's actual commutation terms), and capital gains estimates.</p>
+
+<p>Where appropriate, seek advice from an appropriately qualified and regulated financial adviser, tax adviser, or other professional before making significant financial decisions.</p>
+
+<p>We are not liable for any financial loss arising from decisions made based on information or insights provided by the App, subject to Section 16 (Liability) and your statutory rights.</p>
+
+<h2 id="s5">5. AI features</h2>
+<p>The App may use third-party artificial intelligence services to power analysis and chat features (see our <a href="privacy-policy.html">Privacy Policy</a> for details of the specific provider(s) currently in use).</p>
+<ul>
+  <li>AI-generated content is produced automatically and is <strong>not</strong> reviewed by a financial adviser, tax adviser, or other professional before being provided to you</li>
+  <li>AI-generated content may contain errors or inaccuracies and does not constitute financial, investment, tax, or legal advice — see Section 4</li>
+  <li>You should not rely solely on AI-generated content when making financial, investment, tax, pension, or other significant decisions</li>
+  <li>AI features are scoped to discuss your personal finances and the App's features only</li>
+  <li>The quality and relevance of AI responses depends on the information you have chosen to enter into the App</li>
+</ul>
+
+<h2 id="s6">6. Accuracy and third-party data</h2>
+<p>tuckt deals with information across investments, property, pensions, capital gains, retirement projections, bank data, market prices, and AI analysis. This data and these calculations can be wrong or incomplete, including because:</p>
+<ul>
+  <li>Market data can be delayed, unavailable, or inaccurate</li>
+  <li>Third-party data (including from open banking or market data providers) can be inaccurate or out of date</li>
+  <li>Tax rules and rates can change</li>
+  <li>Exchange rates fluctuate</li>
+  <li>Property valuations you enter are estimates, not formal valuations</li>
+  <li>Pension assumptions and notional valuations may differ from your actual scheme's terms</li>
+  <li>Information you enter yourself may be incomplete or incorrect</li>
+  <li>AI-generated output can be erroneous (see Section 5)</li>
+</ul>
+
+<h2 id="s7">7. Subscriptions and free trials</h2>
+<ul>
+  <li>tuckt offers a free trial period of 7 days with full access to all features, limited to one free trial per user</li>
+  <li>Unless you cancel before the end of the trial period, your subscription will automatically renew as a paid subscription ("tuckt Pro") at the applicable price</li>
+  <li>After the trial, continued access to premium features (including AI analysis and chat, budget planner, retirement planner, wealth reports, and CSV import/export) requires an active tuckt Pro subscription</li>
+  <li>Subscriptions are billed monthly (£7.99) or annually (£69.99) via the Apple App Store and managed through RevenueCat, in accordance with Apple's standard subscription terms</li>
+  <li>Subscriptions auto-renew unless cancelled at least 24 hours before the renewal date, via your Apple ID account settings</li>
+  <li>If subscription pricing changes, you will be notified in accordance with applicable law and the Apple App Store's applicable terms and processes</li>
+</ul>
+
+<h2 id="s8">8. Cancellation and consumer rights</h2>
+<p>Your statutory rights, including any rights you may have to cancel a contract for digital content or digital services, are not affected by these Terms. Where your subscription is purchased through the Apple App Store, cancellation and refunds are generally handled through Apple in accordance with Apple's applicable terms and policies, not directly by us.</p>
+
+<h2 id="s9">9. Your content and financial data</h2>
+<ul>
+  <li>You retain ownership of your financial information, and any other information or personal content you upload to the App</li>
+  <li>You grant Dovestar a non-exclusive, limited licence to host, store, reproduce, transmit, and otherwise process your content solely as necessary to provide, maintain, secure, and improve the functionality of the App, in accordance with our <a href="privacy-policy.html">Privacy Policy</a></li>
+  <li>This licence ends when your data is deleted, subject to our legitimate retention obligations (see our Privacy Policy)</li>
+  <li>You're responsible for the accuracy of data you enter — the App's calculations, tax modelling, and AI insights are only as accurate as the information you provide</li>
+  <li>Where the App provides an export function, you may export your data (e.g. via CSV) before deleting your account</li>
+  <li>Connecting a bank account via our open banking partner is entirely optional; you can use every feature of the App by entering figures manually instead</li>
+</ul>
+
+<h2 id="s10">10. Privacy</h2>
+<p>Our collection and use of your personal information is explained in our <a href="privacy-policy.html">Privacy Policy</a>, which forms part of the information provided to you when using the App.</p>
+
+<h2 id="s11">11. Third-party services</h2>
+<p>The App may rely on third-party providers for services including payment processing, authentication, cloud hosting, artificial intelligence, open banking, market data, analytics, and communications (currently including TrueLayer for optional bank connections and RevenueCat for subscription management). Bank connections are processed through secure, FCA-regulated third-party gateways; we never store your online banking credentials.</p>
+<p>We do not control third-party services and cannot guarantee their availability, accuracy, or continued operation. Live pricing and bank connection features may not be available at all times.</p>
+
+<h2 id="s12">12. Acceptable use</h2>
+<p>You agree not to:</p>
+<ul>
+  <li>Use the App for any unlawful purpose</li>
+  <li>Attempt to reverse-engineer, hack, or disrupt the App</li>
+  <li>Share your account with others</li>
+  <li>Use the App or its outputs to provide regulated financial advice or other professional services to third parties without appropriate authorisation</li>
+  <li>Attempt to use the AI chat or analysis features for purposes unrelated to your own personal finances</li>
+</ul>
+
+<h2 id="s13">13. Intellectual property</h2>
+<p><strong>Dovestar owns:</strong> the tuckt branding, software, user interface, graphics, content, algorithms, and documentation, protected by applicable intellectual property laws. You may not copy, modify, or redistribute the App.</p>
+<p><strong>You own:</strong> your financial information, and any other information or personal content you upload to the App (see Section 9).</p>
+
+<h2 id="s14">14. Availability and changes to the App</h2>
+<p>We aim to keep tuckt available and functioning properly, but we do not guarantee that the App will always be available, uninterrupted, secure, or error-free. We may temporarily suspend access for maintenance, updates, security reasons, or circumstances beyond our reasonable control.</p>
+
+<h2 id="s15">15. Suspension and termination</h2>
 <p>You may delete your account at any time via Settings. We may suspend or terminate your access if you breach these terms.</p>
-<h2>13. Changes to these terms</h2>
-<p>We may update these terms from time to time. Continued use of the App after changes constitutes acceptance of the new terms.</p>
-<h2>14. Governing law</h2>
-<p>These terms are governed by the laws of England and Wales. Any disputes will be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
-<h2>15. Contact us</h2>
-<p>hello@tuckt.co.uk</p>
+<p>On termination or account deletion:</p>
+<ul>
+  <li>Access to premium ("tuckt Pro") features ends immediately; any unused portion of a subscription period is not refundable by us directly (refunds for App Store purchases are handled by Apple per Section 8)</li>
+  <li>Your stored financial data is retained and then deleted in accordance with our <a href="privacy-policy.html">Privacy Policy</a></li>
+  <li>You may export your data before deletion, where an export function is available (see Section 9)</li>
+</ul>
+
+<h2 id="s16">16. Liability</h2>
+<p>To the maximum extent permitted by law, Dovestar Limited is not liable for any indirect, incidental, or consequential damages arising from your use of the App, including but not limited to financial losses resulting from decisions made using App-provided information, projections, or AI-generated content.</p>
+<p>Subject to any liability which cannot lawfully be excluded or limited, our total liability to you arising out of or in connection with your use of the App shall not exceed the greater of £100 and the amount you have paid us for the App during the 12 months preceding the event giving rise to the claim.</p>
+<p>Nothing in these Terms excludes or limits liability for death or personal injury caused by negligence, fraud, or any other liability that cannot be excluded under UK law. <strong>Nothing in these Terms affects your statutory rights as a consumer.</strong></p>
+
+<h2 id="s17">17. Force majeure</h2>
+<p>We are not responsible for failure or delay caused by circumstances beyond our reasonable control, including internet or telecommunications failures, third-party service outages, cyber incidents, power failures, natural disasters, or changes in law.</p>
+
+<h2 id="s18">18. Changes to these Terms</h2>
+<p>We may update these terms from time to time. Continued use of the App after changes constitutes acceptance of the new terms, except where such changes relate to pricing (see Section 7).</p>
+
+<h2 id="s19">19. General legal provisions</h2>
+<p><strong>Severability:</strong> If any provision of these Terms is found to be unlawful, invalid, or unenforceable, that provision shall be deemed modified to the minimum extent necessary, and the remaining provisions shall continue in full force and effect.</p>
+<p><strong>Entire agreement:</strong> These Terms, together with our Privacy Policy and any other terms expressly incorporated into them, constitute the agreement between you and us regarding your use of the App.</p>
+<p><strong>Assignment:</strong> We may transfer or assign our rights and obligations under these Terms in connection with a merger, acquisition, sale of assets, or other corporate transaction.</p>
+
+<h2 id="s20">20. Governing law</h2>
+<p>These Terms are governed by the laws of England and Wales. Subject to any mandatory consumer rights, the courts of England and Wales shall have jurisdiction over disputes arising in connection with these Terms.</p>
+
+<h2 id="s21">21. Contact us</h2>
+<p><a href="mailto:hello@tuckt.co.uk">hello@tuckt.co.uk</a></p>
+<p class="company-details">
+  Dovestar Limited<br>
+  Company number: 17445391<br>
+  Registered office: Doves Barn, Swattenden Lane, Cranbrook, Kent, TN17 3PN
+</p>
+
 </body>
 </html>
