@@ -128,7 +128,7 @@
 <a class="brand" href="index.html">tuckt</a>
 
 <h1>Privacy Policy</h1>
-<div class="updated">Last updated 27 September 2026</div>
+<div class="updated">Last updated 9 October 2026</div>
 
 <h2>1. Who we are</h2>
 <p>tuckt ("we", "us", "our") provides a personal wealth tracking and financial planning app for iOS. This policy explains what personal data we collect, why, and your rights over it, in line with UK GDPR and the Data Protection Act 2018.</p>
@@ -140,11 +140,12 @@
 <ul>
   <li><strong>Additional profile data</strong>: date of birth, occupation, and a physical address, if you choose to add them</li>
   <li><strong>Financial data you enter</strong>: investments (individual holdings or simple total-value entries), crypto, cash, property, pensions (including Defined Contribution and Defined Benefit/Final Salary schemes), debts (credit cards, loans, mortgages, BNPL), income, budget categories, dependants' details (name, type, date of birth), sell/buy transaction records for investments and crypto — add as much or as little as you like, for whichever categories are relevant to you</li>
+  <li><strong>Feedback you send us</strong>: if you use the in-app feedback form, the message you write, a reply email address if you choose to give one, and your user ID, the app version and the time it was sent</li>
   <li><strong>Optional bank connection data</strong>: we may in future offer the option to connect a bank account. If we do, it will never be required — you can use tuckt fully by entering figures manually. If you choose to connect an account, transaction and balance data would be retrieved via our regulated open banking partner (see Section 5)</li>
 </ul>
 <p>We also collect the following automatically, as part of providing the service:</p>
 <ul>
-  <li><strong>Subscription status</strong>: whether you're on our free or paid ("tuckt Pro") tier, and trial status</li>
+  <li><strong>Subscription status</strong>: whether you're on our free or paid ("tuckt Pro") tier, trial status, and your purchase history as recorded by Apple and our subscription provider, RevenueCat (see Section 5)</li>
   <li><strong>AI feature usage</strong>: to enforce fair-use limits on AI chat and analysis features, we log each use of AI chat, portfolio analysis and the Wealth Report against your account (date and usage type only — not your financial data or the content of your messages; see Section 6)</li>
   <li><strong>Device data</strong>: device type, OS version, IP address (for security/fraud prevention)</li>
 </ul>
@@ -159,14 +160,15 @@
   <li>To send you notifications you've opted into</li>
   <li>To process subscription payments (via Apple's App Store and our subscription management provider, RevenueCat)</li>
   <li>To enforce fair-use limits on AI features and prevent abuse of the service</li>
-  <li>To communicate with you about your account or the service</li>
+  <li>To send you account emails (such as sign-up confirmation and password reset) and otherwise communicate with you about your account or the service</li>
+  <li>To receive, read and act on feedback you send us</li>
 </ul>
 
 <h2>4. Legal basis for processing (UK GDPR)</h2>
 <ul>
   <li><strong>Contract</strong>: processing necessary to provide the service you've signed up for</li>
   <li><strong>Consent</strong>: for sending your data to our AI provider when you use AI features (see Section 6), and for optional features like notifications, bank connection, and marketing communications</li>
-  <li><strong>Legitimate interests</strong>: fraud prevention, service improvement</li>
+  <li><strong>Legitimate interests</strong>: fraud prevention, handling feedback you send us, service improvement</li>
   <li><strong>Legal obligation</strong>: for financial/payment records we're required to retain (see Section 7)</li>
 </ul>
 
@@ -174,7 +176,8 @@
 <ul>
   <li><strong>Supabase</strong> (database/authentication hosting) — hosted in the EU West (London) region</li>
   <li><strong>Anthropic (Claude AI)</strong> — our AI provider, used only if you consent to AI features. See Section 6 for exactly what is sent and how it is used.</li>
-  <li><strong>RevenueCat</strong> (subscription management) — processes purchase and subscription-status data, linked to the Apple App Store</li>
+  <li><strong>RevenueCat</strong> (subscription management) — records your Apple purchase history (product, dates, price, trial and renewal status, storefront country) and basic device and app details (platform, OS and app version) against your tuckt user ID. The app does not send RevenueCat your name or email address. RevenueCat acts as a data processor on our behalf, and Apple processes your payments.</li>
+  <li><strong>Resend</strong> (email delivery) — sends our account emails (sign-up confirmation and password reset), which contain your email address and a one-time link or code, and delivers feedback you send us to our support inbox (the message, the reply email address if you gave one, your user ID and the app version). Resend keeps records of the emails it sends for up to 30 days, and may keep addresses that bounce or are reported as spam on a suppression list until they are removed. Resend acts as a data processor on our behalf.</li>
   <li><strong>TrueLayer</strong> (open banking) — not currently in use. If we introduce bank connections in future, this would apply only if you choose to connect a bank account; TrueLayer is directly regulated by the FCA as an Account Information Service Provider. We do not see or store your bank login details — these are handled entirely by TrueLayer under open banking standards. Once imported, transaction and balance data is stored in tuckt in the same way as data you enter manually, and is retained under the same terms (see Section 7). If you disconnect your bank account, we stop importing new data immediately; previously imported data already in your account remains until you delete it yourself or delete your account.</li>
   <li><strong>Market data providers</strong> (for live price information, when this feature is active) — we send ticker symbols only, never personal data</li>
 </ul>
@@ -202,6 +205,9 @@
 <ul>
   <li><strong>General account and financial tracking data</strong> (the information you enter into the app — assets, budget, pensions, etc.): when you delete your account, it becomes inaccessible immediately and enters a 90-day recovery window, during which you can contact us to restore it if you change your mind. After 90 days, this data is permanently deleted from our production systems. Residual copies in routine backups are deleted or overwritten in the ordinary course of our backup cycle, and are not used for any other purpose in the meantime.</li>
   <li><strong>Payment and transaction records</strong> (subscription payments, invoices, and related financial records): retained for 6 years from the date of the transaction, in line with UK legal and tax record-keeping requirements (Companies Act 2006 and HMRC requirements), even after account deletion.</li>
+  <li><strong>Feedback</strong>: feedback you send is stored in our database with your user ID and is deleted when your account is permanently deleted. A copy is also emailed to our support inbox, where we keep it only for as long as it is needed to act on your feedback and then delete it, so a copy may remain after your account is deleted. Resend keeps its own delivery records for up to 30 days (see Section 5).</li>
+  <li><strong>Subscription records</strong>: RevenueCat keeps your user ID and Apple purchase history. These are not deleted automatically when your account is deleted. We keep them for as long as they are needed to manage your subscription and for the record-keeping above, and we will delete them from RevenueCat if you ask us to (subject to those requirements). Apple keeps its own payment records independently of us.</li>
+  <li><strong>Technical logs</strong>: our hosting provider keeps security and request logs, which can include user IDs and IP addresses, for a limited period. They are not deleted on a per-user basis.</li>
 </ul>
 
 <h2>8. Your rights</h2>
@@ -220,7 +226,7 @@
 <p>We use industry-standard encryption in transit and at rest, alongside access controls that restrict data access to what's necessary to provide the service. Our database provider, Supabase, is SOC 2 Type II compliant, ISO/IEC 27001:2022 certified, and supports GDPR-compliant deployments. No method of transmission or storage is completely secure, but we maintain procedures to detect and respond to security incidents, and will notify the ICO and any affected individuals where we're legally required to do so.</p>
 
 <h2>10. International data transfers</h2>
-<p>Your data is hosted within the UK/EEA (Supabase, EU West London region). Anthropic, our AI provider, processes data in the United States. Where we transfer personal data to Anthropic outside the UK, this is safeguarded by the EU Standard Contractual Clauses together with the UK International Data Transfer Addendum, incorporated into Anthropic's data processing terms, as an approved mechanism for lawful UK data transfers under UK GDPR.</p>
+<p>Your data is hosted within the UK/EEA (Supabase, EU West London region). Anthropic, our AI provider, processes data in the United States. Where we transfer personal data to Anthropic outside the UK, this is safeguarded by the EU Standard Contractual Clauses together with the UK International Data Transfer Addendum, incorporated into Anthropic's data processing terms, as an approved mechanism for lawful UK data transfers under UK GDPR. Some of our other providers, including RevenueCat and Resend, may also process limited data outside the UK; where they do, we rely on the safeguards required by UK data protection law.</p>
 
 <h2>11. Automated analysis and personalised insights</h2>
 <p>tuckt uses automated analysis of the financial information you provide (such as your net worth, income, investments, spending, pensions, debt, and property) to generate personalised insights, projections, categorisations, and AI commentary within the app.</p>
